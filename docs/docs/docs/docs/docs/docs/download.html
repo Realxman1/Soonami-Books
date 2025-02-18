@@ -1,1 +1,8 @@
-
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (!urlParams.has('access')) {
+        document.body.innerHTML = "<h2>Unauthorized Access</h2>";
+    } else {
+        document.write('<a href="ebooks/your-ebook.pdf" download>Download Now</a>');
+    }
+</script>
